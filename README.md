@@ -199,23 +199,29 @@ SceneManager.LoadScene(), OnClick()
 
 개발일지
 -------------
-1. 인접한 블록 접근 방법
-Linecast나 Raycast를 쓰면 끝나는 쉬운 문제였지만,                                                                                      처음 시작할 때는 떠오르지 않아서 몇 일을 고민을 했습니다.                                                                      처음으로 마주한 쉬우면서 어려웠던 첫 번째 어려웠던 점이었습니다.
+1. 인접한 블록 접근 방법 Linecast나 Raycast를 쓰면 끝나는 쉬운 문제였지만,<br />
+처음 시작할 때는 떠오르지 않아서 몇 일을 고민을 했습니다.<br />
+처음으로 마주한 쉬우면서 어려웠던 첫 번째 어려웠던 점이었습니다. <br />
 2. 블록 눌리는 표현
-Update문에서 Scale값에 접근하는 방식은 매 프레임마다 실행되다 보니 손이 많이 갔습니다.         그래서 블록에 애니메이션을 적용해 원할 때 만 사용하도록 구현했습니다.
-3. 대각선 이동
-If(Input.GetKey() && Input.GetKey()) { transform.Translate( new Vector3(,,,) * speed * Time.deltaTime) } 이런 식으로 다양한 시도를 해봤지만,                                                                                                               대각선 속도가 뭔가 배로 늘어난 것처럼 빨라 Vector값을 줄여 봤는데도 부자연스러웠습니다.      계속 고민하다가 수업시간에 배운 Input.GetAxis()는 float값으로 쓸 수 있다는 것이 생각났습니다. 이 후에 구글링을 통해 Input.GetAxisRaw()는 -1, 0, 1값으로만 나온다고 해서 이 것을 사용하여 회전 방향만 대각선으로 잡아주는 식으로 구현했습니다.
-4. 폭탄 떨어지는 위치 표시
-처음에는 폭탄 낙하 위치에서 블록까지 Line을 그렸는데 레이저랑 헷갈리고 뭔가 난잡했습니다. 다른 방식으로 블록에 폭탄 떨어지는 곳을 색을 나타내는 식으로 구현했습니다.                                그런데 생긴 문제가 색이 바뀌고 블록을 밟으면 색과 블록의 애니메이션이 달라지는 경우가 생겨  한참을 고민하다가 폭탄이 생기면 폭탄이 사라질 때까지 블록을 못 밟는 방식으로 구현했습니다.
+Update문에서 Scale값에 접근하는 방식은 매 프레임마다 실행되다 보니 손이 많이 갔습니다.<br />
+그래서 블록에 애니메이션을 적용해 원할 때 만 사용하도록 구현했습니다. <br />
+3. 대각선 이동 If(Input.GetKey() && Input.GetKey()) { transform.Translate( new Vector3(,,,) * speed * Time.deltaTime) } 이런 식으로 다양한 시도를 해봤지만,<br />
+대각선 속도가 뭔가 배로 늘어난 것처럼 빨라 Vector값을 줄여 봤는데도 부자연스러웠습니다.<br />
+계속 고민하다가 수업시간에 배운 Input.GetAxis()는 float값으로 쓸 수 있다는 것이 생각났습니다.<br />
+이 후에 구글링을 통해 Input.GetAxisRaw()는 -1, 0, 1값으로만 나온다고 해서 이 것을 사용하여 회전 방향만 대각선으로 잡아주는 식으로 구현했습니다. <br />
+4. 폭탄 떨어지는 위치 표시 처음에는 폭탄 낙하 위치에서 블록까지 Line을 그렸는데 레이저랑 헷갈리고 뭔가 난잡했습니다.<br />
+다른 방식으로 블록에 폭탄 떨어지는 곳을 색을 나타내는 식으로 구현했습니다.<br />
+그런데 생긴 문제가 색이 바뀌고 블록을 밟으면 색과 블록의 애니메이션이 달라지는 경우가 생겨<br />
+한참을 고민하다가 폭탄이 생기면 폭탄이 사라질 때까지 블록을 못 밟는 방식으로 구현했습니다.
 
 애셋 출처(애셋스토어)
 --------------
-플레이어 – Stylized Astronaut
-블록 – Low Poly Space Rocks
-배경화면 – Space Star Field Backgrounds
-버튼 – Clean Vector Icons
-폭탄 – Rockets, Missiles & Bombs - Cartoon Low Poly Pack
-배경 사운드 – Deep In Space
-패널 사운드 – Free Casual SoundFx Pack
-장애물, 블록 사운드 – Sound FX – Retro Pack
+플레이어 – Stylized Astronaut <br />
+블록 – Low Poly Space Rocks <br />
+배경화면 – Space Star Field Backgrounds <br />
+버튼 – Clean Vector Icons <br />
+폭탄 – Rockets, Missiles & Bombs - Cartoon Low Poly Pack <br />
+배경 사운드 – Deep In Space <br />
+패널 사운드 – Free Casual SoundFx Pack <br />
+장애물, 블록 사운드 – Sound FX – Retro Pack <br />
 폭탄 파티클 – 48 파티클 이펙트 패키지
