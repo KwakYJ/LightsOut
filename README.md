@@ -4,6 +4,10 @@
 ![LightsOutIllustration svg](https://user-images.githubusercontent.com/77434165/104590965-647b4d80-56af-11eb-92ee-46f949bfb0b8.png) <br />
 https://en.wikipedia.org/wiki/Lights_Out_(game)
 
+Game Video
+-------------
+https://youtu.be/IOu1B0TS2HY
+
 Game Concept
 --------------
 1. 퍼즐 게임을 3D로 구현
